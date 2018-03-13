@@ -1,0 +1,33 @@
+准备一个Book表(id,name,price),导入struts框架,sqljdbc.jar/ojdbc.jar
+
+（1）写一个主页面index.jsp，有两个超链接 （<a href="addBook.jsp">添加书籍</a>,<a href="showBook.do">显示书籍</a>）
+
+（2）点击“添加书籍”,跳到addBook.jsp，其中有一个表单，能够填入商品名和价格，
+     提交到addBook.do中
+
+（3）准备一个BookActionForm（继承ActionForm）,写上id,name,price属性,提供get和set方法
+     (注意属性名和表单控件的名称一样)
+
+（4）准备一个BookAddAction继承Action类，重写execute(),得到BookActionForm对象，得到数据
+     新建一个实体类Book(id,name,price)，将BookActionForm数据封装到一个实体类的对象中
+     调用BookDao中的addBook(Book b),
+     添加数据.添加成功返回一个ActionForward("/success.jsp"),success.jsp中“添加成功”
+     和“返回”的超链接到index.jsp
+
+（5）编写BookDao中addBook(Book b)
+
+ (6) 在struts-config.xml中配置好BookActionForm和BookAddAction(注意path参数)
+
+（7）点击“显示书籍”,超连接到showBook.do,准备一个ShowBookAction继承Action类，
+     实现execute(),调用BookDao中的showBook(),得到一个List集合，设置到request中,
+     封装ActionForward（/showBook.jsp），在struts-config.xml中配置好
+     ShowBookAction(注意path参数,不需要name参数,因为客户端没有数据送给服务端)
+  
+ 
+ (8)写出showBook.jsp，在showBook.jsp中拿到request中设置的值
+    再用表格的形式列出数据，在每一行的后面添加一个删除超链接
+    (<a href="delBook.do?id=<%= u.getId() %>"),带上参数，超链接到delBook.do
+    准备DelBookAction,继承Action类，实现execute(),调用BookDao中的delBook(int id),
+    删除数据,删除成功以后封装ActionForward（"/showBook.do"）,重新查找数据
+
+ 添加一个修改的操作

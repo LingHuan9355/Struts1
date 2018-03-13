@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <!--  配置ActionForm -->
+  <form-beans>
+    <form-bean name="bookForm" type="com.cshr.form.BookActionForm"></form-bean>
+  
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+    <!-- 配置一个action
+  		path表示请求路径  ，必须要以/开头
+  		type用于配置处理的Action类在哪里
+  	 -->
+   <action path="/showBook" type="com.cshr.action.QueryAction"></action>
+   <action path="/addBook" type="com.cshr.action.BookAddAction" name="bookForm"></action>
+   <action path="/delBook" type="com.cshr.action.DelBookAction" name="bookForm"></action>
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
