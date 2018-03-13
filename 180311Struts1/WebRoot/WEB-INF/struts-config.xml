@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <!--  配置ActionForm -->
+  <form-beans>
+      <form-bean name="stuForm" type="com.cshr.form.StudentForm"></form-bean>  
+  
+  </form-beans>
+  
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+    <!-- 配置一个action
+  		path表示请求路径  ，必须要以/开头
+  		type用于配置处理的Action类在哪里
+  	 -->
+    <action path="/query" 
+            type="com.cshr.action.QueryAction">
+    </action>
+    
+    <!-- 收集数据：ActionForm
+  		name属性用于指定哪个actionForm帮这个Action收集数据
+  	 -->
+    <action path="/add" 
+            type="com.cshr.action.AddAction"
+            name="stuForm">
+    </action>
+    <action path="/delete" 
+            type="com.cshr.action.DeleteAction"
+            name="stuForm">
+    </action>
+  	 
+    
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
