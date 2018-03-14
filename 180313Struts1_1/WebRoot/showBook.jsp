@@ -25,6 +25,7 @@
 	           <td>${book.book_price }</td>
 	           <td>${book.book_write }</td>
 	           <td>
+	             <a href="singleQueryBook.do?bookId=${book.book_id}">修改</a>
 	             <a href="delBook.do?bookId=${book.book_id}">删除</a>
 	           </td>
 	         </tr>

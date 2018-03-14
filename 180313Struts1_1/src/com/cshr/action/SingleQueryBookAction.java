@@ -14,30 +14,29 @@ import com.cshr.form.BookActionForm;
 
 /**
  * 
- *@Name : DelBookAction
+ *@Name : SingleQueryBookAction
  *@Author : LH
- *@Date : 2018-3-13下午10:37:36
+ *@Date : 2018-3-14下午06:06:14
  *@Version : V1.0
- * @Description:删除书籍的DelBookAction继承Action类，重写其execute()方法
+ * @Description:查询单本书籍的QueryAction继承Action类，重写其execute()方法
  */
-public class DelBookAction extends Action {
+public class SingleQueryBookAction extends Action {
 
+	
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-        BookActionForm bookForm = (BookActionForm) form;
-        int id = bookForm.getBookId();
-        //System.out.println(id);
 		
-        Books book = new Books();
-        book.setBook_id(id);
-        
-        int row = BaseDao.delete(book);
-        if(row >0){
-        	return new ActionForward("/showBook.do",true);
-		}else{
-			return new ActionForward("/error.jsp",true);
-		}
+		BookActionForm bookForm = (BookActionForm) form;
+		int bookId = bookForm.getBookId();
+		//System.out.println("single:"+bookId);
+		
+		Object obj =  BaseDao.load(Books.class, bookId);
+		Books book = (Books) obj;
+		
+		request.setAttribute("book", book);
+		
+		return new ActionForward("/updBook.jsp",false);
 	}
 }

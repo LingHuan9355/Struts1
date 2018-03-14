@@ -2,6 +2,8 @@
 <FlowViewLayout Version="1.2">
   <StrutsActivity path="/showBook.do" location="50,50" dimension="206,104" />
   <StrutsActivity path="/addBook.do" location="350,50" dimension="226,104" />
-  <StrutsActivity path="/delBook.do" />
+  <StrutsActivity path="/delBook.do" location="650,50" dimension="221,104" />
+  <StrutsActivity path="/singleQueryBook.do" location="950,50" dimension="272,104" />
+  <StrutsActivity path="/updBook.do" location="50,250" dimension="272,104" />
 </FlowViewLayout>
 

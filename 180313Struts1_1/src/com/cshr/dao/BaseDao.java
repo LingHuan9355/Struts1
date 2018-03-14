@@ -76,9 +76,9 @@ public class BaseDao {
 				e.printStackTrace();
 			}
 	}
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		System.out.println(getConn());
-	}
+	}*/
 	
 	//通用的insert语句的方法
 	@SuppressWarnings("unchecked")
@@ -107,7 +107,7 @@ public class BaseDao {
 			}
 		}
 		sb.append(" ) ");
-		System.out.println(sb);
+		//System.out.println(sb);
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
@@ -145,7 +145,7 @@ public class BaseDao {
 		StringBuffer sb = new StringBuffer();
 		sb.append(" select * from ");
 		sb.append(c.getSimpleName());
-		System.out.println(sb);
+		//System.out.println(sb);
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
@@ -198,7 +198,7 @@ public class BaseDao {
 	   sb.append(fs[0].getName());
 	   sb.append(" = ");
 	   sb.append(id);
-	   System.out.println(sb);
+	   //System.out.println(sb);
 	   
 	   Connection conn = null;
 	   PreparedStatement pst = null;
@@ -209,7 +209,7 @@ public class BaseDao {
      	   pst = conn.prepareStatement(sb.toString());
      	   rs = pst.executeQuery();
            while(rs.next()){
-        	   for (int i = 1; i < fs.length; i++) {
+        	   for (int i = 0; i < fs.length; i++) {
         		   if(rs.getObject(fs[i].getName()) instanceof BigDecimal){
 						BigDecimal big = (BigDecimal) rs.getObject(fs[i].getName());
 						int value = big.intValue();
@@ -258,7 +258,7 @@ public class BaseDao {
 		sb.append(" where ");
 		sb.append(fs[0].getName());
 		sb.append(" = ?");
-		System.out.println(sb);
+		//System.out.println(sb);
 		
 		Connection conn = null;
 		PreparedStatement pst =null;
@@ -302,7 +302,7 @@ public class BaseDao {
 		sb.append(" where ");
 		sb.append(fs[0].getName());
 		sb.append(" = ? ");
-		System.out.println(sb);
+		//System.out.println(sb);
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
@@ -342,7 +342,7 @@ public class BaseDao {
           sql.append(" = ");
           sql.append(fs[0].get(obj));
          
-          System.out.println(sql);
+         // System.out.println(sql);
           
           conn = BaseDao.getConn();
           pst = conn.prepareStatement(sql.toString());

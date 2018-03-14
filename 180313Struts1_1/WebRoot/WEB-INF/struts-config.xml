@@ -18,6 +18,8 @@
    <action path="/showBook" type="com.cshr.action.QueryAction"></action>
    <action path="/addBook" type="com.cshr.action.BookAddAction" name="bookForm"></action>
    <action path="/delBook" type="com.cshr.action.DelBookAction" name="bookForm"></action>
+   <action path="/singleQueryBook" type="com.cshr.action.SingleQueryBookAction" name="bookForm"></action>
+   <action path="/updBook" type="com.cshr.action.UpdBookAction" name="bookForm"></action>
   </action-mappings>
   <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
 </struts-config>

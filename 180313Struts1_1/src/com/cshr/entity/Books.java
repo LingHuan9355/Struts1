@@ -24,6 +24,14 @@ public class Books {
 		super();
 	}
 	
+	public Books(int bookId, String bookName, double bookPrice, String bookWrite) {
+		super();
+		book_id = bookId;
+		book_name = bookName;
+		book_price = bookPrice;
+		book_write = bookWrite;
+	}
+
 	public Books(String bookName, double bookPrice, String bookWrite) {
 		book_name = bookName;
 		book_price = bookPrice;
