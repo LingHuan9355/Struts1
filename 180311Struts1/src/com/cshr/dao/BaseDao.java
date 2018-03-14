@@ -209,7 +209,7 @@ public class BaseDao {
      	   pst = conn.prepareStatement(sb.toString());
      	   rs = pst.executeQuery();
            while(rs.next()){
-        	   for (int i = 1; i < fs.length; i++) {
+        	   for (int i = 0; i < fs.length; i++) {
         		   if(rs.getObject(fs[i].getName()) instanceof BigDecimal){
 						BigDecimal big = (BigDecimal) rs.getObject(fs[i].getName());
 						int value = big.intValue();
