@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+     <form-bean name="stuForm" type="com.cshr.form.StudentForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  
+  <!--scope用于设置ActionForm的作用域的对象
+  	默认为session  -->
+  <action-mappings>
+     <action path="/add" 
+             type="com.cshr.action.AddAction" 
+             scope="request" 
+             name="stuForm"
+             input="/add.jsp"> </action>
+  
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+  
+  <!-- struts中的utilDate转换器的注册方式 -->
+  <plug-in className="com.cshr.util.MyPlugin"></plug-in>
+</struts-config>
+
