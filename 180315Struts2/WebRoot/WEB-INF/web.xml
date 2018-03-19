@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <servlet><!--
-    一、a.自定义Servlet类继承struts的ActionServlet,然后在init()方法注册自己的转换器，调用父类的init()方法;
- *   b.把web.xml中配置的Action改写自定义的Servlet;
+    一、转换器的注册方式一
+    a.自定义Servlet类继承struts的ActionServlet,然后在init()方法注册自己的转换器，调用父类的init()方法;
+    b.把web.xml中配置的Action改写自定义的Servlet;
     -->
     <servlet-name>action</servlet-name>
     

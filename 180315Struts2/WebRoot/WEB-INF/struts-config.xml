@@ -21,7 +21,12 @@
   </action-mappings>
   <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
   
-  <!-- struts中的utilDate转换器的注册方式 -->
+  <!-- struts中的utilDate转换器的注册方式
+   转换器的注册方式二
+ 二、插件注册
+     a.自定义一个类，实现一个插件接口(Plugin);
+     b.在struts-config.xml中配置出上面写的自定义类;
+   -->
   <plug-in className="com.cshr.util.MyPlugin"></plug-in>
 </struts-config>
 

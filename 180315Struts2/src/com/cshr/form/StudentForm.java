@@ -26,6 +26,7 @@ public class StudentForm extends ActionForm {
 	@Override
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		//重置属性值
+		//在struts-config.xml作用域设置为request，就不用在这里设置pub了
 		pub = false ;
 		System.out.println("reset...");
 
