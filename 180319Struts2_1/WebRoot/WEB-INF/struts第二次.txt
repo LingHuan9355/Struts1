@@ -1,0 +1,34 @@
+1.写一个注册资料表单，里面包含编号，姓名,年龄,存款,出生日期,性别,爱好,资料,是否公开,
+  其中编号，姓名,年龄,存款,出生日期都是文本框;性别,是否公开 是单选框;爱好是复选框,资料是文本域
+
+  其中日期需要自定义转换器,注册转换器（使用Servlet注册）
+  在一个ActionFrom中准备好上面的属性,重写一个重置方法,对爱好，性别给一个初始值，
+  重写验证的方法，对姓名，年龄,存款,性别进行验证，姓名的长度小于2，年龄 <18,存款小于0 ;性别既不是男又不是女
+  如果验证失败，跳回原页面去显示错误信息
+
+  在Action中，使用BeanUtils.copyProperties(),将ActionFrom的值复制到Users中，然后设置到request中,转发
+  到result.jsp的结果页面，在result.jsp中展示Users的信息
+
+  注意：添加错误信息ActionError errors = new ActionError();
+                   ActionMessage am = new ActionMessage("年龄不正确",false)
+		   errors.add("error.name",am);
+  
+        在Action配置中要配置input=""显示错误页面
+
+
+	在错误页面要导入标签，struts.jar----META-INF---tlds---struts-html.tld
+	<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+	<html:errors property="error.name">
+
+	加入过滤器解决中文乱码问题
+
+
+
+  
+
+
+
+
+
+  
+
