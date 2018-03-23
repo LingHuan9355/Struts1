@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/regAction.do" location="50,50" dimension="182,104" />
+  <StrutsActivity path="/reg.jsp" location="350,50" dimension="77,53" />
+  <StrutsActivity path="/regEntity.do" location="650,50" dimension="213,104" />
+  <StrutsActivity path="/regAAction.do" location="950,50" dimension="213,104" />
+  <StrutsActivity path="/regA.jsp" location="50,250" dimension="85,53" />
+  <StrutsActivity path="/regBAction.do" location="350,250" dimension="190,104" />
+  <StrutsActivity path="/regB.jsp" location="650,250" dimension="85,53" />
+  <StrutsTransition id="/regA.jsp,null,/regAAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="92,250" />
+      <AbsolutePoint location="92,199" />
+      <AbsolutePoint location="1056,199" />
+      <AbsolutePoint location="1056,154" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reg.jsp,null,/regEntity.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="427,76" />
+      <AbsolutePoint location="650,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/regB.jsp,null,/regBAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,276" />
+      <AbsolutePoint location="540,276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reg.jsp,null,/regAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,76" />
+      <AbsolutePoint location="232,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+     <form-bean name="uForm" type="com.hr.form.UsersForm"></form-bean>
+     <form-bean name="ueForm" type="com.hr.form.UserEntityForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+      <action path="/regAction" type="com.hr.action.RegAction" 
+              name="uForm" input="/reg.jsp"></action>
+      <action path="/regEntity" type="com.hr.action.RegEntityAction" 
+              name="ueForm" ></action>
+      <action path="/regAAction" type="com.hr.action.RegAAction" 
+              name="ueForm" input="/regA.jsp"></action>
+      <action path="/regBAction" type="com.hr.action.RegBAction" 
+              name="ueForm" input="/regB.jsp"></action>
+      
+  
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
