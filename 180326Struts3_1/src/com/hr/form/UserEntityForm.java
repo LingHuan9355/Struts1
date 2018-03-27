@@ -1,51 +1,48 @@
 package com.hr.form;
 
-import java.sql.Date;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 
-/**
- * 
- *@Name : RegActionForm
- *@Author : LH
- *@Date : 2018-3-26下午11:01:30
- *@Version : V1.0
- * @Description:
- */
-@SuppressWarnings("serial")
-public class RegActionForm extends BaseForm {
+import com.hr.entity.Users;
 
-	private int id;
-	private String uname;
-	private String uemail;
-	private Date udate;
+@SuppressWarnings("serial")
+public class UserEntityForm extends BaseForm {
+
+	//struts1.x的版本以实体类来收集表单属性时，一定要new对象
+	private Users users = new Users();
+
+	public Users getUsers() {
+		return users;
+	}
+
+	public void setUsers(Users users) {
+		this.users = users;
+	}
 	
 	@Override
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
-		
 		ActionErrors errors = new ActionErrors();
 		
-		  if(isEmpty(uname)){
+		  if(isEmpty(users.getUname())){
 			ActionMessage msg = new ActionMessage("<font color='red' >用户名不能为空</font>", false);
 		    errors.add("error.uname",msg);
 		  }
 		  
-		  if(isLength(uname)){
+		  if(isLength(users.getUname())){
 			  ActionMessage msg = new ActionMessage("<font color='red' >用户名长度不能小于4</font>", false);
 			  errors.add("error.uname",msg);
 		  }
 		  
-		  if(isEmpty(uemail)){
+		  if(isEmpty(users.getUemail())){
 			  ActionMessage msg = new ActionMessage("<font color='red' >邮箱不能为空</font>", false);
 			  errors.add("error.uemail",msg);
 		  }
 		  
-		  if(!isEmail(uemail)){
+		  if(!isEmail(users.getUemail())){
 			  ActionMessage msg = new ActionMessage("<font color='red' >邮箱格式不正确</font>", false);
 			  errors.add("error.uemail",msg);
 		  }
@@ -59,31 +56,4 @@ public class RegActionForm extends BaseForm {
 			
 	         return errors;
 	}
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getUname() {
-		return uname;
-	}
-	public void setUname(String uname) {
-		this.uname = uname;
-	}
-	public String getUemail() {
-		return uemail;
-	}
-	public void setUemail(String uemail) {
-		this.uemail = uemail;
-	}
-	public Date getUdate() {
-		return udate;
-	}
-	public void setUdate(Date udate) {
-		this.udate = udate;
-	}
-	
-	
 }

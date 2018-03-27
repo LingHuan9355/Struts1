@@ -5,14 +5,17 @@
   <data-sources />
   <form-beans>
      <form-bean name="uForm" type="com.hr.form.RegActionForm"></form-bean>
-  
+     <form-bean name="uenForm" type="com.hr.form.UserEntityForm"></form-bean>
   </form-beans>
   <global-exceptions />
   <global-forwards />
   <action-mappings>
      <action path="/regAction" type="com.hr.action.RegAction"
-             name="uForm"  input="/reg1.jsp"
-     ></action>
+             name="uForm"  input="/reg1.jsp"></action>
+     <action path="/regEntity" type="com.hr.action.RegEntityAction"
+             name="uenForm" ></action>
+     
+     
   </action-mappings>
   <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
   <!-- struts中的utilDate转换器的注册方式
