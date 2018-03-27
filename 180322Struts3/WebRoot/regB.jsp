@@ -10,8 +10,9 @@
   <body>
     <form action="regBAction.do" method="post">
             <input type="hidden" name="temp" value="b"/>
-        	邮箱:<input name="users.uemail" /><html:errors property="error.uemail"/><br/> 
-        	日期:<input type="date" name="users.udate" /><br/> 
+        	邮箱:<input name="users.uemail" value="${ueForm.users.uemail}"/>
+        	   <html:errors property="error.uemail" /><br/> 
+        	日期:<input type="date" name="users.udate" value="${ueForm.users.udate}"/><br/> 
         	<input type="submit" value="提交"/><br/> 
     </form>
 

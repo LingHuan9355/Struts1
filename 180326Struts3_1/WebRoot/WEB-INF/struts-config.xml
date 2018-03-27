@@ -6,6 +6,7 @@
   <form-beans>
      <form-bean name="uForm" type="com.hr.form.RegActionForm"></form-bean>
      <form-bean name="uenForm" type="com.hr.form.UserEntityForm"></form-bean>
+     <form-bean name="allForm" type="com.hr.form.AllForm"></form-bean>
   </form-beans>
   <global-exceptions />
   <global-forwards />
@@ -14,7 +15,14 @@
              name="uForm"  input="/reg1.jsp"></action>
      <action path="/regEntity" type="com.hr.action.RegEntityAction"
              name="uenForm" ></action>
-     
+             
+     <action path="/regAAction" type="com.hr.action.RegAAction" 
+              name="allForm" 
+              input="/regA.jsp"
+              ></action>
+      <action path="/regBAction" type="com.hr.action.RegBAction" 
+              name="allForm" 
+              input="/regB.jsp"></action>
      
   </action-mappings>
   <message-resources parameter="com.yourcompany.struts.ApplicationResources" />

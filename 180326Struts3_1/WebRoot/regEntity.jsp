@@ -12,7 +12,7 @@
        <form action="regEntity.do" method="post">
         	用户名:<input name="users.uname" value="${uenForm.uname}"/><html:errors property="error.uname"/><br/> 
         	邮箱:<input name="users.uemail" value="${uenForm.uemail}"/><html:errors property="error.uemail"/><br/> 
-        	日期:<input type="date" name="users.udate" value="${uenForm.udate}"/><br/> 
+        	日期:<input type="date" name="users.udate" value="${userForm.udate}"/><br/> 
         	<input type="submit" value="提交"/><br/> 
     </form>
   </body>

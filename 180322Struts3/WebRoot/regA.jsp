@@ -9,8 +9,10 @@
   <body>
     <form action="regAAction.do" method="post">
           <input type="hidden" name="temp" value="a"/>
-              用户名:<input name="users.uname" value="${ueForm.uname}"/><html:errors property="error.uname"/><br/> 
-                 密码:<input name="users.upwd" value="${ueForm.upwd}"/><html:errors property="error.upwd"/><br/> 
+              用户名:<input name="users.uname" value="${ueForm.users.uname}"/>
+              <html:errors property="error.uname"/><br/> 
+                 密码:<input name="users.upwd" value="${ueForm.users.upwd}"/>
+                 <html:errors property="error.upwd"/><br/> 
     	  <input type="submit" value="下一步"/>
     	</form>
   </body>

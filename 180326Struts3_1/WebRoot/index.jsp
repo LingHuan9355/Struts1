@@ -10,9 +10,9 @@
   <body>
      <div align="center">
          <h1><a href="reg1.jsp">普通注册</a></h1>
-         <h1><a href="regEntity.jsp">实体类收集表单数据注册</a></h1><%--
+         <h1><a href="regEntity.jsp">实体类收集表单数据注册</a></h1>
          <h1><a href="regA.jsp">跨表单收集数据</a></h1>
-     --%></div>
+     </div>
   
   </body>
 </html>
