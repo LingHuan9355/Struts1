@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+      <!-- 创建动态ActionForm -->
+      <form-bean name="dForm" type="org.apache.struts.action.DynaActionForm">
+           <form-property name="uname" type="java.lang.String"></form-property>
+           <form-property name="upwd" type="java.lang.String"></form-property>
+           <form-property name="uid" type="java.lang.Integer"></form-property>
+      </form-bean>
+  
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+     <action path="/loginAction" type="com.hr.action.LoginAction"
+             name="dForm"></action>
+  
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
