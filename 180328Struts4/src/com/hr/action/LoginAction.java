@@ -8,6 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.DynaActionForm;
+import org.apache.struts.actions.ForwardAction;
 
 public class LoginAction extends Action {
 
@@ -19,6 +20,7 @@ public class LoginAction extends Action {
 		DynaActionForm daForm = (DynaActionForm) form;
 		System.out.println(daForm.get("uname"));
 		System.out.println(daForm.get("upwd"));
+		System.out.println(daForm.get("uid"));
 		
         return null;
 	}

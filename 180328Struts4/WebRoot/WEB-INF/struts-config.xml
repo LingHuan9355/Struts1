@@ -11,12 +11,28 @@
            <form-property name="uid" type="java.lang.Integer"></form-property>
       </form-bean>
   
+      <form-bean name="uForm" type="com.hr.form.UserActionForm"></form-bean>
   </form-beans>
   <global-exceptions />
   <global-forwards />
   <action-mappings>
      <action path="/loginAction" type="com.hr.action.LoginAction"
-             name="dForm"></action>
+             name="dForm">
+     </action>
+     
+     <!-- 配置ForwardAction
+  	parameter表示转发Action的跳转路径
+  	 -->
+  	 <action path="/add" type="org.apache.struts.actions.ForwardAction"
+  	         parameter="/WEB-INF/add.jsp">
+  	 </action>        
+     
+     <!-- 配置用户Action 
+  		parameter用于设置调用方法的字符串参数
+  	-->        
+     <action path="/userAction" type="com.hr.action.UserAction"
+             parameter="method" name="uForm" >
+     </action>
   
   </action-mappings>
   <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
