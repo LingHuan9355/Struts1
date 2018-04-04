@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+    <form-bean name="userForm" type="com.hr.form.UserActionForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+    <action path="/tagAction" type="com.hr.action.TagAction" 
+            name="userForm" parameter="method"></action>
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
