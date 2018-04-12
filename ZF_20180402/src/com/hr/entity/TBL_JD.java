@@ -8,7 +8,7 @@ package com.hr.entity;
  *@Version : V1.0
  * @Description:
  */
-public class JDEntity {
+public class TBL_JD {
     
 	//½ÖµÀid
 	private int jdid;
@@ -19,9 +19,9 @@ public class JDEntity {
 	
 	
 	
-	public JDEntity() {
+	public TBL_JD() {
 	}
-	public JDEntity(int jdid, String jd, int qxid) {
+	public TBL_JD(int jdid, String jd, int qxid) {
 		super();
 		this.jdid = jdid;
 		this.jd = jd;

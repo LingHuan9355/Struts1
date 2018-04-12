@@ -8,7 +8,7 @@ package com.hr.entity;
  *@Version : V1.0
  * @Description:
  */
-public class FWLXEntity {
+public class TBL_FWLX {
 
 	//¿‡–Õid
 	private int lxid;
@@ -16,9 +16,9 @@ public class FWLXEntity {
 	private String fwlx;
 	
 	
-	public FWLXEntity() {
+	public TBL_FWLX() {
 	}
-	public FWLXEntity(int lxid, String fwlx) {
+	public TBL_FWLX(int lxid, String fwlx) {
 		super();
 		this.lxid = lxid;
 		this.fwlx = fwlx;

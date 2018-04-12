@@ -2,31 +2,31 @@ package com.hr.entity;
 
 /**
  * 区县的实体类
- *@Name : QXEntity
+ *@Name : TBL_QX
  *@Author : LH
  *@Date : 2018-4-4下午11:52:09
  *@Version : V1.0
  * @Description:
  */
-public class QXEntity {
+public class TBL_QX {
 
 	//区县id
 	private int qxid;
 	//区县名
 	private String qx;
 
-	
     
-	
-	public QXEntity() {
+	public TBL_QX() {
 	}
 
-	public QXEntity(int qxid, String qx) {
+	public TBL_QX(int qxid, String qx) {
 		super();
 		this.qxid = qxid;
 		this.qx = qx;
 	}
 
+	
+	
 	public int getQxid() {
 		return qxid;
 	}

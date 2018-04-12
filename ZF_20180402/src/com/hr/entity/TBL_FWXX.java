@@ -3,14 +3,14 @@ package com.hr.entity;
 import java.util.Date;
 
 /**
- * 
- *@Name : FWXXEntity
+ * 房屋信息实体类
+ *@Name : TBL_FWXX
  *@Author : LH
  *@Date : 2018-4-4下午11:57:37
  *@Version : V1.0
  * @Description:
  */
-public class FWXXEntity {
+public class TBL_FWXX {
 
 	//房屋id
 	private int fwid;
@@ -40,10 +40,10 @@ public class FWXXEntity {
 	private String lxr;
 	
 	
-	public FWXXEntity() {
+	public TBL_FWXX() {
 	}
 	
-	public FWXXEntity(int fwid, int uid, int jdid, int qxid, int lxid, int shi,
+	public TBL_FWXX(int fwid, int uid, int jdid, int qxid, int lxid, int shi,
 			int ting, String fwxx, double zj, String title, Date date,
 			String telephone, String lxr) {
 		this.fwid = fwid;

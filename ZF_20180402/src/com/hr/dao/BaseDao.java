@@ -11,9 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Properties;
 
 /**
@@ -135,7 +133,7 @@ public class BaseDao {
 	}
 	
 	//通用的查询所有数据的方法 
-	@SuppressWarnings("unchecked")
+/*	@SuppressWarnings("unchecked")
 	public static List queryList(Class c){
 		List list = new ArrayList();
 	    
@@ -145,7 +143,7 @@ public class BaseDao {
 		StringBuffer sb = new StringBuffer();
 		sb.append(" select * from ");
 		sb.append(c.getSimpleName());
-		//System.out.println(sb);
+		System.out.println(sb);
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
@@ -181,7 +179,7 @@ public class BaseDao {
 		}
 		
 		return list;
-	}
+	}*/
 	
 	//通用的查询某个类的单个数据的方法
 	@SuppressWarnings("unchecked")

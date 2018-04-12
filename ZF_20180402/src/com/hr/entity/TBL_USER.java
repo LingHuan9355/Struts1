@@ -8,20 +8,20 @@ package com.hr.entity;
  *@Version : V1.0
  * @Description:
  */
-public class UserEntity {
+public class TBL_USER {
 
 	//用户id
 	private int uid;
 	//用户名称
 	private String uname;
-	
+	//用户密码
 	private String upass;
 
 	
-	public UserEntity() {
+	public TBL_USER() {
 	}
 
-	public UserEntity(int uid, String uname, String upass) {
+	public TBL_USER(int uid, String uname, String upass) {
 		super();
 		this.uid = uid;
 		this.uname = uname;
