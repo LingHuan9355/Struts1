@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+    <form-bean name="uForm" type="com.hr.form.UserActionForm"></form-bean>
+  </form-beans>
+  <!-- 全局异常的配置 -->
+  <global-exceptions>
+      <exception key="uerror" type="java.lang.Exception" path="/uerror.jsp"></exception>
+  </global-exceptions>
+  <global-forwards />
+  <action-mappings>
+      <action path="/userAction" type="com.hr.action.UserAction"
+              name="uForm" parameter="method"
+              ></action>
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
